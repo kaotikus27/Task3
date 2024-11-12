@@ -2,4 +2,94 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: Inter, sans-serif;
+    color: #323642;
+}
+body{
+    background: linear-gradient(
+        to bottom,
+        rgba(73, 54, 169, 1) 0%,    /* 100% opacity at the top */
+        rgba(73, 54, 169, 0.5) 50%, /* 50% opacity in the middle */
+        rgba(73, 54, 169, 0) 100%   /* 0% opacity at the bottom */
+      );
+      background-repeat: no-repeat; /* Ensures no repeat */
+}
+.main--container{
+    // border: 1px solid red;
+    max-width: 1512px;
+    width: 80%; /* Set a fixed width for the body element */ 
+    margin: 50px auto; 
+
+    .context{
+        display: flex;
+        flex-direction: column;
+        .top--container{
+            display: flex;
+           flex-direction: column;
+           justify-content: center;
+           align-items: center;
+           gap: 10px;
+           h1{
+            color: #fff;
+            font-weight: bolder;
+            font-size: 35px;
+           }
+           p{
+            color: #fff;
+            font-size: 22px;
+           }
+
+        }
+
+        .display--container{
+            border: 1px solid #323642;
+            border-radius: 8px;
+           background-color: #fff;
+            
+            .contents{
+                display: flex;
+                flex-direction: column;
+                gap: 1em;
+                padding: 2.5em;
+            }
+            .top--display--container{
+                
+                // border: 1px solid red;
+                margin-top: 2em;
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                gap: 5px;
+                .generalBox{
+                    border-radius:8px;
+                    width: 100%;
+                    border: 1px solid gray;
+                    font-size: 22px;
+                    padding:10px 2em 10px 25px;
+                    align-self: flex-start;
+                }
+                .above{
+                    font-size: 18px;
+                    font-weight: 400;
+                }
+                p{
+                    font-weight: bold;
+                }
+                
+            }
+            .bottom--display--container{
+                // border: 1px solid red;
+                display: flex;
+                flex-direction: column;
+                font-size: 22px;
+                font-weight: 400;
+                .amountSelected{
+                    font-size: 18px;
+                }
+                .valueConverted{
+                    font-size: 45px;
+                }
+            }
+        }
+    }
 }

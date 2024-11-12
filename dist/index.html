@@ -9,9 +9,53 @@
     <title>ExchangeRape API - Eleomar Halamans</title>
     <link rel="stylesheet" href="styles.css" />
   </head>
-  <body>
+  <body class="contained">
+
+    <div class="main--container">
+      <div class="context">
+        <div class="top--container">
+          <h1>1 USD to PHP - Convert US Dollars to Philippine Pesos</h1>
+          <p>Simple Currency Converter - Eleomar Halaman</p>
+        </div>
+
+        <div class="display--container">
+          <div class="contents">
+            <div class="top--display--container">
+              <div class="amount generalBox">
+                <p class="amountText above ">Amount</p>
+                <p id="amountValue" class="amountValue">$1.00</p>
+              </div>
+              <div class="fromCountry generalBox">
+                <p class="fromText above" >From</p>
+                <p id="fromCurrency" class="countryValue">USD</p>
+              </div>
+              <div class="toCountry generalBox">
+                <p class="fromText above">To</p>
+                <p id="toCurrency" class="countryValue">PHP</p>
+              </div>
+            </div>
+            <div class="bottom--display--container">
+              <div class="amountSelected">
+                <p id="amountSelected">1.00 USD =</p>
+              </div>
+              <div class="valueConverted">
+                <p id="convertedValue">58.63 PHP </p>
+              </div>
+              <div class="viceVersa">
+                <p id="viceVersa">1 PHP = 0.017 USD</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <button onclick="fetchExchangeRate()"> TEST</button>
    
-    <button onclick="fetchExchangeRate()">click</button>
+
     <script src="app.js"></script>
+       
+  </div>
+
+
   </body>
 </html>

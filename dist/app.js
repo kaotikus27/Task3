@@ -26,11 +26,24 @@ function fetchExchangeRate() {
             // Parse the response JSON
             const data = yield response.json();
             // Log the exchange rate
+            // Update the page with the fetched data
+            const amountSelectedElement = document.getElementById("amountSelected");
+            const convertedValueElement = document.getElementById("convertedValue");
+            const viceVersaElement = document.getElementById("viceVersa");
+            if (amountSelectedElement) {
+                amountSelectedElement.textContent = `1.00 ${data.base_code} =`;
+            }
+            if (convertedValueElement) {
+                convertedValueElement.textContent = `${(5 * data.conversion_rate).toFixed(2)} ${data.target_code}`;
+            }
+            if (viceVersaElement) {
+                viceVersaElement.textContent = `1 ${data.target_code} = ${(1 / data.conversion_rate).toFixed(3)} ${data.base_code}`;
+            }
             console.log(`Exchange rate from ${data.base_code} to ${data.target_code}: ${data.conversion_rate}`);
             console.log(`Last updated: ${data.time_last_update_utc}`);
         }
         catch (error) {
-            console.error("Failed to fetch dataa:", error);
+            console.error("Failed to fetch data:", error);
         }
     });
 }

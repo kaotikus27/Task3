@@ -2,4 +2,82 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: Inter, sans-serif;
+  color: #323642;
+}
+
+body {
+  background: linear-gradient(to bottom, rgb(73, 54, 169) 0%, rgba(73, 54, 169, 0.5) 50%, rgba(73, 54, 169, 0) 100%);
+  background-repeat: no-repeat; /* Ensures no repeat */
+}
+
+.main--container {
+  max-width: 1512px;
+  width: 80%; /* Set a fixed width for the body element */
+  margin: 50px auto;
+}
+.main--container .context {
+  display: flex;
+  flex-direction: column;
+}
+.main--container .context .top--container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+.main--container .context .top--container h1 {
+  color: #fff;
+  font-weight: bolder;
+  font-size: 35px;
+}
+.main--container .context .top--container p {
+  color: #fff;
+  font-size: 22px;
+}
+.main--container .context .display--container {
+  border: 1px solid #323642;
+  border-radius: 8px;
+  background-color: #fff;
+}
+.main--container .context .display--container .contents {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  padding: 2.5em;
+}
+.main--container .context .display--container .top--display--container {
+  margin-top: 2em;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 5px;
+}
+.main--container .context .display--container .top--display--container .generalBox {
+  border-radius: 8px;
+  width: 100%;
+  border: 1px solid gray;
+  font-size: 22px;
+  padding: 10px 2em 10px 25px;
+  align-self: flex-start;
+}
+.main--container .context .display--container .top--display--container .above {
+  font-size: 18px;
+  font-weight: 400;
+}
+.main--container .context .display--container .top--display--container p {
+  font-weight: bold;
+}
+.main--container .context .display--container .bottom--display--container {
+  display: flex;
+  flex-direction: column;
+  font-size: 22px;
+  font-weight: 400;
+}
+.main--container .context .display--container .bottom--display--container .amountSelected {
+  font-size: 18px;
+}
+.main--container .context .display--container .bottom--display--container .valueConverted {
+  font-size: 45px;
 }/*# sourceMappingURL=styles.css.map */
